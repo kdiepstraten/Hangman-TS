@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: .5rem;
+}
+.letter_btn{
+    width: 100%;
+    border: 3px solid black;
+    background: none;
+    aspect-ratio: 1 / 1;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+.letter_btn.active{
+    background-color: hsl(200,100%,50%);
+    color: white;
+}
+.letter_btn.inactive{
+    opacity: .3;
+}
+.letter_btn:hover:not(:disabled),
+.letter_btn:focus:not(:disabled){
+    background-color: hsl(200,100%,75%);
+}
